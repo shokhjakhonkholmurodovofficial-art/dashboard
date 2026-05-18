@@ -350,15 +350,6 @@
     function toggleTheme() {
       isDark = !isDark
 
-      document.documentElement.classList.toggle('dark', isDark)
-      document.body.classList.toggle('bg-ink-700', isDark)
-      document.body.classList.toggle('text-white', isDark)
-      document.body.classList.toggle('bg-slate-100', !isDark)
-      document.body.classList.toggle('text-slate-800', !isDark)
-
-      document.getElementById('themeIcon').innerHTML = isDark ? sunIconHTML : moonIconHTML
-      document.getElementById('themeLabel').textContent = isDark ? 'Светлая тема' : 'Тёмная тема'
-
       const heroVisual = document.getElementById('heroVisual')
       if (isDark) {
         heroVisual.className = 'animate-float'
